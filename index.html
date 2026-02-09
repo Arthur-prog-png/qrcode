@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Tabela</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 1302px;
+      height: 550px;
+    }
+
+    td {
+      border: px solid black;
+    }
+
+    .img {
+      width: 200px;
+      background-image: url("logo.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .video {
+        padding: 0;
+        height: 180px;
+        overflow: hidden;
+    }
+
+    .video video {
+      height: 100%;
+        width: 100%;
+        object-fit: fill;
+        display: block;
+        transform: translateX(px);
+    }
+    .menu {
+  display: flex;
+  flex-direction: column;   /* um embaixo do outro */
+  justify-content: center;  /* centraliza vertical */
+  align-items: center;      /* centraliza horizontal */
+  gap: 37px;                /* espaço entre botões */
+}
+
+.menu button {
+  width: 140px;
+  height: 40px;
+  font-size: 15px;
+  cursor: pointer;
+}
+  </style>
+
+<script>
+function mostrar(conteudo) {
+  document.getElementById("conteudo").innerHTML = conteudo;
+}
+</script>
+</head>
+
+<body>
+
+<table>
+  <tr style="height:180px;">
+    <td class="img"></td>
+    <td class="video">
+        <video src="miranh.mp4" autoplay muted loop ></video>
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+   <td class="menu">
+<button onclick="mostrar(`
+  <img src='historia.jpeg' width='300'><br><br>
+  <p>
+    O Homem-Aranha é Peter Parker, um jovem que ganhou poderes após ser picado
+    por uma aranha radioativa. Ele passa a usar suas habilidades para proteger
+    a cidade de Nova York, aprendendo que grandes poderes trazem grandes
+    responsabilidades.
+  </p>
+`)">História</button>
+    <button onclick="mostrar('Texto do botão 2')">Trajes</button><br><br>
+    <button onclick="mostrar('Texto do botão 3')">Variantes</button><br><br>
+    <button onclick="mostrar('Texto do botão 4')">Web Swing</button>
+     <button onclick="mostrar(`
+    <img src='QrCode.png' width='300'><br><br>
+    <p>
+      Escaneie O QR CODE para nos contatar
+    </p>
+`)">Contate-nos</button>
+</button>
+  </td>
+  <td id="conteudo"></td>
+    <td></td>
+  </tr>
+</table>
+
+</body>
+</html>
